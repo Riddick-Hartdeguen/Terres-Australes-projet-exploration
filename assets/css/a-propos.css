@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    background-color: #1f2039;
+
+  }
+  
+  a {
+    color: #242424;
+    text-decoration: none;
+  }
+  
+  em {
+    color: #126ef0;
+    font-style: normal;
+  }
+  
+  h1 {
+    font-size: 3em;
+    color: #efb27f;
+    font-family: 'Montserrat' sans-serif;
+    
+  }
+  
+  h2 {
+    color: #f9f8ff;
+  }
+  
+  p,
+  li {
+    font-size: 1em;
+    color: #f9f8ff;
+  }
+  
+  header,
+  footer {
+    background-color: white;
+    padding: 20px 50px;
+  }
+  .cta {
+    display: inline-block;
+    background: linear-gradient(#e8e6f1da, #121449);
+    color: white;
+    border-radius: 50px;
+    padding: 20px 30px;
+    margin-top: 5%;
+    margin-left: 25%;
+    
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .cta:hover {
+    background: linear-gradient(#696484, #8788ba);
+    text-decoration: none;
+  }
+  
+  .lien-icone {
+    margin-left: 30px;
+  }
+  
+  .lien-icone:hover {
+    opacity: 0.5;
+  }
+  .carre-contenu {
+    border-right: 1px solid #8e86b5;
+    border-bottom: 1px solid #8e86b5;
+    padding: 50px;
+    margin-bottom: 80px;
+  }
+  
+  .carre-contenu h2 {
+    margin-top: 30px;
+  }
+  
+  .carre-contenu ul {
+    margin-top: 30px;
+  }
+  
+  .carre-contenu + div {
+    text-align: center;
+  }
+  
+  section {
+    padding: 80px;
+    padding-right: 100px;
+  }
+  
+  .a-propos-main {
+    width: 50%;
+    margin: auto;
+  }
+  
+  footer,
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav a {
+    margin-left: 30px;
+  }
+
+/* Définition de l'animation d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Position de départ */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Position finale */
+  }
+}
+
+/* Styles par défaut des éléments pour les garder invisibles avant l'animation */
+h1, h2, p, img {
+  opacity: 0; /* Rendre l'élément invisible */
+  transform: translateY(20px); /* Position initiale en dehors de la vue */
+  transition: opacity 1s, transform 1s; /* Appliquer la transition pour une animation fluide */
+}
+
+/* Classe pour déclencher l'animation */
+.show {
+  opacity: 1; /* Rendre l'élément visible */
+  transform: translateY(0); /* Placer l'élément dans sa position finale */
+}

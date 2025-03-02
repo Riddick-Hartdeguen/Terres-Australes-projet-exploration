@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    background-color: #1f2039;
+
+  }
+  
+  a {
+    color: #242424;
+    text-decoration: none;
+  }
+  
+  em {
+    color: #126ef0;
+    font-style: normal;
+  }
+  
+  h1 {
+    font-size: 3.4em;
+    color: #efb27f;
+    font-family: 'Montserrat' sans-serif;
+    
+  }
+  
+  h2 {
+    color: #f9f8ff;
+  }
+  
+  p
+    {
+    font-size: 1.1em;
+    color: #f9f8ff;
+  }
+  
+  header,
+  footer {
+    background-color: white;
+    padding: 20px 50px;
+  }
+  
+  .cta {
+    display: inline-block;
+    background: linear-gradient(#e8e6f1da, #121449);
+    color: white;
+    border-radius: 50px;
+    padding: 20px 30px;
+    margin-top: 5%;
+    margin-left: 25%;
+    
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .cta:hover {
+    background: linear-gradient(#696484, #8788ba);
+    text-decoration: none;
+  }
+  
+  .lien-icone {
+    margin-left: 30px;
+  }
+  
+  .lien-icone:hover {
+    opacity: 0.5;
+  }
+  
+ 
+  section {
+    padding: 80px;
+    padding-right: 100px;
+  }
+   
+  footer,
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav a {
+    margin-left: 30px;
+  }
+  
+  .accueil-photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(216, 213, 213);
+    height: 200px;
+    width: 100%;
+    
+  }
+  
+  .accueil-photos h2 {
+    color: #242424;
+    font-family:Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    
+    
+  }
+  
+  .container-1 {
+    background-image:url("/images/accueil/element-1.jpg");
+    height: 600px;
+    width: 100%;  
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 1px 2px 3px 4px rgba(76,76,76,0.5);
+    
+  }
+
+  .container-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(216, 213, 213);
+    height: 200px;
+    width: 100%;
+  }
+
+  .container-2 h2 {
+    color: #242424;
+    font-family:Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size:large;
+
+  }
+
+  .container-3 {
+    background-image: url("/images/accueil/element-4.jpg");
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 1px 2px 3px 4px rgba(76,76,76,0.5);
+    
+  }
+
+  
+  .accueil-introduction {
+    display: flex;
+    flex-direction: row;
+    /* width: 60%; */
+    align-items: flex-start;
+    margin: auto;
+  }
+  
+  .accueil-introduction h1 {
+    margin-bottom: 15px;
+  }
+  
+  .accueil-introduction p {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .accueil-introduction div {
+    padding-right: 80px;
+  }
+  
+ 
+/* Définition de l'animation d'apparition */
+/*@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Position de départ */
+  /*}
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Position finale */
+  /* }
+} */
+
+/* Styles par défaut des éléments pour les garder invisibles avant l'animation */
+h1, h2, p, img {
+  opacity: 0; /* Rendre l'élément invisible */
+transform: translateY(20px); /*Position initiale en dehors de la vue */
+transition: opacity 1s, transform 1s; /*Appliquer la transition pour une animation fluide */
+ }
+
+/* Classe pour déclencher l'animation */
+.show {
+  opacity: 1; /*Rendre l'élément visible */
+  transform: translateY(0); /*Placer l'élément dans sa position finale*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

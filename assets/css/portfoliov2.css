@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    background-color: #1f2039;
+
+  }
+  
+  a {
+    color: #242424;
+    text-decoration: none;
+  }
+  
+  em {
+    color: #126ef0;
+    font-style: normal;
+  }
+  
+  h1 {
+    font-size: 3.5em;
+    color: #efb27f;
+    font-family: 'Montserrat' sans-serif;
+    
+  }
+  
+  h2 {
+    color: #f9f8ff;
+  }
+  p {
+    font-size: 1.1em;
+    color: #050505;
+    margin-bottom: 50px;
+  }
+
+  header,
+  footer {
+    background-color: white;
+    padding: 20px 50px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .lien-icone {
+    margin-left: 30px;
+  }
+  
+  .lien-icone:hover {
+    opacity: 0.5;
+  }
+
+  section {
+    padding: 80px;
+    padding-right: 100px;
+  }
+
+  footer,
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav a {
+    margin-left: 30px;
+  }
+
+  .portfolio-section-photos {
+    background-color: white;
+  }
+  
+  .portfolio-section-photos h2 {
+    color: #242424;
+    margin-bottom: 30px;
+  }
+ 
+   .grid-paysages { 
+    display:grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr; 
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    gap: 15px;
+   }
+  
+  .grid-paysages img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  } 
+
+  .lien-conteneur-photo {
+    position: relative;
+  }
+  
+  .photo-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    font-family:Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    display:none;
+  }
+  
+  .lien-conteneur-photo:hover .photo-hover {
+    display: flex;
+  }
+
+/* Définition de l'animation d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Position de départ */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Position finale */
+  }
+}
+
+/* Styles par défaut des éléments pour les garder invisibles avant l'animation */
+h1, h2, p, img {
+  opacity: 0; /* Rendre l'élément invisible */
+  transform: translateY(20px); /* Position initiale en dehors de la vue */
+  transition: opacity 1s, transform 1s; /* Appliquer la transition pour une animation fluide */
+}
+
+/* Classe pour déclencher l'animation */
+.show {
+  opacity: 1; /* Rendre l'élément visible */
+  transform: translateY(0); /* Placer l'élément dans sa position finale */
+}
+
+.sous-titre a {
+color: beige;
+margin-left:30px;
+text-decoration:underline;
+font-style: oblique;
+
+
+}
+
+.titre-sous-titre{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(216, 213, 213);
+  height: 200px;
+  width: 100%;
+}
+
+.container-2 h2 {
+  color: #242424;
+  font-family:Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-size:large;
+
+}
+
+.container-3 {
+  background-image: url("/images/portfolio/Marion_Dusfren_soleil_couchant_Croze4kt.jpg");
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 1px 2px 3px 4px rgba(76,76,76,0.5);
+  
+}
