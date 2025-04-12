@@ -46,18 +46,20 @@
 }
 
 .footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* obligatoire pour répartir correctement les éléments */
+  padding: 0 20px; /* petit padding pour éviter que ça touche les bords */
+  box-sizing: border-box; /* inclut le padding dans la largeur */
 }
 
 .footer-content p {
-    font-size: 0.9em;
-    color: #242424;
-    text-align: center;
-    margin: 10px;
-    flex-grow: 1;
+  flex: 1;
+  font-size: 0.9em;
+  color: #242424;
+  text-align: center;
+  margin: 10px;
 }
 
 .footer-content a {
