@@ -42,6 +42,49 @@
     background-color: white;
     padding: 20px 50px;
   }
+
+  footer {
+    font-family: 'Manrope', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    font-size: 0.9em;
+    color: #242424;
+    text-align: center;
+    margin: 10px;
+    flex-grow: 1;
+}
+
+.footer-content a {
+    color: #126ef0;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-social a:hover {
+    opacity: 0.7;
+}
+
   .cta {
     display: inline-block;
     background: linear-gradient(#e8e6f1da, #121449);
