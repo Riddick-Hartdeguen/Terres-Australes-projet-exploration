@@ -216,21 +216,9 @@
     padding-right: 80px;
   }
   
- 
-/* Définition de l'animation d'apparition */
-/*@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px); /* Position de départ */
-  /*}
-  to {
-    opacity: 1;
-    transform: translateY(0); /* Position finale */
-  /* }
-} */
 
 /* Styles par défaut des éléments pour les garder invisibles avant l'animation */
-h1, h2, p, img {
+h1, h2, p {
   opacity: 0; /* Rendre l'élément invisible */
 transform: translateY(20px); /*Position initiale en dehors de la vue */
 transition: opacity 1s, transform 1s; /*Appliquer la transition pour une animation fluide */

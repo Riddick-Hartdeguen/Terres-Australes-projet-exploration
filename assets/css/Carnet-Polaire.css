@@ -27,9 +27,6 @@
     
   }
   
-  h2 {
-    color: #f9f8ff;
-  }
   p {
     font-size: 1.1em;
     color: #050505;
@@ -127,7 +124,7 @@
    .grid-paysages { 
     display:grid;
     grid-template-columns: 2fr 1.5fr 1.5fr; 
-    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-auto-rows: 300px;
     gap: 15px;
    }
   
@@ -162,6 +159,27 @@
   .lien-conteneur-photo:hover .photo-hover {
     display: flex;
   }
+  .arrivee-crozet {
+    text-align: center;
+    color: #242424;
+    font-size: 1.5em;
+    font-family: 'Manrope', sans-serif;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin: 20px auto 10px auto;
+    max-width: 900px;
+}
+
+.description-arrivee {
+  text-align: center;
+  font-size: 1.1em;
+  color: #050505;
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.6;
+  margin: 5px auto 20px auto;
+}
+
+
 
 /* Définition de l'animation d'apparition */
 @keyframes fadeIn {
@@ -176,7 +194,7 @@
 }
 
 /* Styles par défaut des éléments pour les garder invisibles avant l'animation */
-h1, h2, p, img {
+h1, h2, p {
   opacity: 0; /* Rendre l'élément invisible */
   transform: translateY(20px); /* Position initiale en dehors de la vue */
   transition: opacity 1s, transform 1s; /* Appliquer la transition pour une animation fluide */

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }, observerOptions);
   
-    const elementsToAnimate = document.querySelectorAll('h1, h2, p, img');
+    const elementsToAnimate = document.querySelectorAll('h1, h2, p');
     elementsToAnimate.forEach(element => {
       observer.observe(element);
     });

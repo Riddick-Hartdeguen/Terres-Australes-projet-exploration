@@ -169,7 +169,7 @@
 }
 
 /* Styles par défaut des éléments pour les garder invisibles avant l'animation */
-h1, h2, p, img {
+h1, h2, p {
   opacity: 0; /* Rendre l'élément invisible */
   transform: translateY(20px); /* Position initiale en dehors de la vue */
   transition: opacity 1s, transform 1s; /* Appliquer la transition pour une animation fluide */
