@@ -1,0 +1,1070 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+  background-color: #1f2039;
+
+}
+
+a {
+  color: #242424;
+  text-decoration: none;
+}
+
+em {
+  color: #126ef0;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: #efb27f;
+  font-family: 'Montserrat' sans-serif;
+
+}
+
+p {
+  font-size: 1.1em;
+  color: #050505;
+  margin-bottom: 50px;
+}
+
+header,
+footer {
+  background-color: white;
+  padding: 20px 50px;
+}
+
+footer {
+  font-family: 'Manrope', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* obligatoire pour répartir correctement les éléments */
+  padding: 0 20px;
+  /* petit padding pour éviter que ça touche les bords */
+  box-sizing: border-box;
+  /* inclut le padding dans la largeur */
+}
+
+.footer-content p {
+  flex: 1;
+  font-size: 0.9em;
+  color: #242424;
+  text-align: center;
+  margin: 10px;
+}
+
+.footer-content a {
+  color: #126ef0;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+.lien-icone {
+  margin-left: 30px;
+}
+
+.lien-icone:hover {
+  opacity: 0.5;
+}
+
+section {
+  padding: 80px 20px;
+
+}
+
+footer,
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  margin-left: 15px;
+}
+
+/* Définition de l'animation d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Position de départ */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* Position finale */
+  }
+}
+
+/* Styles par défaut des éléments pour les garder invisibles avant l'animation */
+h1,
+h2,
+p {
+  opacity: 0;
+  /* Rendre l'élément invisible */
+  transform: translateY(20px);
+  /* Position initiale en dehors de la vue */
+  transition: opacity 1s, transform 1s;
+  /* Appliquer la transition pour une animation fluide */
+}
+
+/* Classe pour déclencher l'animation */
+.show {
+  opacity: 1;
+  /* Rendre l'élément visible */
+  transform: translateY(0);
+  /* Placer l'élément dans sa position finale */
+}
+
+/* Menu déroulant horizontal centré, sans débordement */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 6px;
+  /* adapte à ton margin-top */
+  width: 100%;
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background-color: white;
+  padding: 5px;
+  padding-bottom: 10px;
+  margin-top: 3px;
+  border-radius: 6px;
+  box-shadow: 0 8px 10px 2px rgba(0, 0, 0, 0.318);
+  white-space: nowrap;
+  animation: fadeIn 0.3s ease forwards;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+
+
+}
+
+.dropdown-menu a {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: #1d1d1f;
+  transition: color 0.5s ease;
+
+  margin-left: 18px;
+  margin-right: 18px;
+
+}
+
+.dropdown-menu a:hover {
+  color: #efb27f;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) translateX(-85%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px) translateX(-85%);
+  }
+}
+
+.titre-et-menu {
+  max-width: 1200px;
+  margin: 80px auto 30px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.bloc-titre h1 {
+  font-size: 3em;
+  color: #efb27f;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+}
+
+.portfolio-section-photos {
+  background-color: white;
+  position: relative;
+}
+
+.portfolio-section-photos h2 {
+  color: #242424;
+  margin-bottom: 30px;
+}
+
+
+.cartes-scientifiques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px));
+  gap: 20px;
+}
+
+.video-wrapper {
+  max-width: 960px;
+  margin: 40px auto 80px auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fiche-scientifique {
+  background-color: #d9d9dd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 4px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin: 0 100px 80px 100px;
+}
+
+.fiche-scientifique:hover {
+  transform: scale(1.01);
+  z-index: 10;
+  position: relative;
+}
+
+.fiche-scientifique img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.portrait-double {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* Ajustable à ton goût, ex : 10px, 15px... */
+  margin: 0 auto 15px auto;
+  max-width: 320px;
+}
+
+.portrait-double img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.portrait-triple {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* Ajustable à ton goût, ex : 10px, 15px... */
+  margin: 0 auto 15px auto;
+  max-width: 700px;
+}
+
+.portrait-triple img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.fiche-scientifique h2 {
+  margin-top: 15px;
+  font-size: 1.3em;
+  color: #1f2039;
+}
+
+.fiche-scientifique p {
+  font-size: 0.95em;
+  color: #343434;
+}
+
+.fiche-scientifique blockquote {
+  font-style: italic;
+  color: #444;
+  margin: 10px 0;
+}
+
+.fiche-scientifique a:not(.ancre-photo) {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #1f2039;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.ancre-photo {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.ancre-photo img {
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.ancre-photo img:hover {
+  transform: scale(1.05);
+}
+
+.fiche-scientifique a:hover {
+  background-color: #333;
+}
+
+.contenu-interview {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.6s ease;
+  margin-top: 15px;
+  text-align: center;
+  color: #333;
+  font-size: 0.95em;
+}
+
+.contenu-interview.visible {
+  max-height: none;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fermer-interview {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 6px 12px;
+  background-color: #1f2039;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fermer-interview.hidden {
+  display: none;
+}
+
+.grille-photos-interview {
+  column-count: 3;
+  column-gap: 15px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.titre-photo-interview {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.titre-photo-interview p {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #1f2039;
+  font-family: 'Manrope', sans-serif;
+  margin-bottom: 0px;
+}
+
+.grille-photos-interview .item-svt {
+  margin-bottom: 15px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgb(0, 0, 0);
+}
+
+.grille-photos-interview .item-svt img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.grille-photos-interview .item-svt:hover img {
+  transform: scale(1.02);
+}
+
+.container {
+  background-image: url("../../images/portfolio/Hivernage/3.jpg");
+  height: 75vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 1px 2px 3px 4px rgba(76, 76, 76, 0.5);
+
+}
+
+.parallax-scroll {
+  background-image: url("../../images/portfolio/Hivernage/DSC00003.jpg");
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 1px 2px 3px 4px rgba(76, 76, 76, 0.5);
+}
+
+.parallax-scroll-2 {
+  background-image: url("../../images/portfolio/Documentaristes/240823\ Drone\ Crozet\ Crepuscule\ KPeyrusse_0002.jpg");
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 1px 2px 3px 4px rgba(76, 76, 76, 0.5);
+}
+
+
+.masonry-grid {
+  column-count: 3;
+  column-gap: 15px;
+  padding: 40px 20px;
+  background-color: #1f2039;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.masonry-grid .item {
+  margin-bottom: 15px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.masonry-grid .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.masonry-grid .item:hover img {
+  transform: scale(1.05);
+}
+
+#lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+#lightbox-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#lightbox-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: scale(0.95);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+#lightbox-overlay.show #lightbox-image {
+  transform: scale(1);
+  opacity: 1;
+}
+
+#lightbox-prev,
+#lightbox-next {
+  position: absolute;
+  top: 50%;
+  font-size: 3em;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+  user-select: none;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+#lightbox-prev {
+  left: 20px;
+}
+
+#lightbox-next {
+  right: 20px;
+}
+
+.container4 {
+  background-image: url("../../images/portfolio/scientifiques/Romain12.JPG");
+  height: 65vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 1px 2px 3px 4px rgba(76, 76, 76, 0.5);
+}
+
+.container3 {
+  background-image: url("../../images/portfolio/épinedorsale/Team1.jpg");
+  height: 75vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 1px 2px 3px 4px rgba(76, 76, 76, 0.5);
+}
+
+.container2 {
+  background-image: url("../../images/portfolio/épinedorsale/240831\ Levee\ Des\ Couleurs\ .jpg");
+  height: 75vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 1px 2px 3px 4px rgba(76, 76, 76, 0.5);
+  margin-bottom: 70px;
+
+}
+.paragraphe {
+  margin-bottom: 90px;
+}
+
+.documentaristes-page .bloc-titre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* SECTION H1 : uniquement pour la page documentaristes */
+.documentaristes-page .titre-et-menu {
+  height: 200px;
+  /* Ajuste selon ton besoin */
+  display: flex;
+  justify-content: center;
+  /* centre horizontalement */
+  align-items: center;
+  /* centre verticalement */
+  margin: 0 auto;
+}
+
+.documentaristes-page .bloc-titre h1 {
+  font-size: 3.5em;
+  color: #efb27f;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.titre {
+  display: inline-block;
+  padding-left: 50px;
+  /* Ajuste cette valeur jusqu'à l'alignement parfait */
+}
+
+
+/* SECTION KEVIN ET MARIN */
+.documentaristes-page .kevin-marin-intro {
+  background-color: #16172c;
+  padding: 50px 60px;
+  color: white;
+  margin-top: -20px;
+  /* pour remonter légèrement sous le H1 */
+}
+
+/* Bloc général contenant description à gauche + image à droite */
+.documentaristes-page .intro-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  /* met les blocs aux extrémités */
+  align-items: stretch;
+  gap: 33px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.documentaristes-page .intro-left {
+  flex: 0 1 50%;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 15px 20px 5px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  /* ➕ Pour que le bloc s’adapte au contenu et s’aligne mieux */
+}
+
+.documentaristes-page .intro-left h2 {
+  font-size: 2em;
+  color: #efb27f;
+  margin-bottom: 15px;
+}
+
+.documentaristes-page .intro-left p {
+  margin-bottom: 20px;
+}
+
+.documentaristes-page .intro-left a {
+  color: #efb27f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.documentaristes-page .intro-left a:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.documentaristes-page .intro-right {
+  flex: 0 1 50%;
+  display: flex;
+  align-items: stretch;
+  /* 🔁 fait correspondre la hauteur de l’image */
+  justify-content: flex-end;
+}
+
+.documentaristes-page .intro-right img {
+  width: 100%;
+  height: 100%;
+  /* ➕ ici on force la même hauteur que la div parent */
+  object-fit: cover;
+  /* ➕ ça évite que l’image soit déformée */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* PHOTO EN DESSOUS */
+.documentaristes-page .intro-photo {
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* VIDÉO DESSOUS */
+.documentaristes-page .intro-video {
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.documentaristes-page .intro-video video {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+
+.copyright {
+  font-size: 0.9em;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.copyright-vsc {
+  position: absolute;
+  font-size: 0.9em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 800px;
+}
+
+.titre-et-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto 20px auto;
+  /* ⬅️ marge externe (haut, droite/gauche, bas) */
+  padding-top: 20px;
+  /* ⬅️ RÉDUIT l’espace au-dessus du H1 */
+  padding-bottom: 20px;
+  /* optionnel : réduit aussi le bas si besoin */
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.bloc-titre h1 {
+  font-size: 3.5em;
+  text-align: center;
+  color: #efb27f;
+  margin-bottom: 20px;
+}
+
+
+.bloc-menu-ancrage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 0px; */
+  
+}
+
+.bloc-menu-ancrage.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  padding: 10px 20px;
+  
+  
+}
+
+.bloc-menu-ancrage.fixed h3 {
+  color:#1f2039;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+.bloc-menu-ancrage h3 {
+  color: white;
+  transition:color 1s ease;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.menu-ancrage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bloc-menu-ancrage.fixed a {
+   background-color: #efb27f;
+  color: #1f2039;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-ancrage a {
+  padding: 6px 12px;
+  background-color: #efb27f;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: background-color 0.3s ease;
+}
+
+.menu-ancrage a:hover {
+  background-color: #d99b63;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bloc-menu {
+  text-align: right;
+  min-width: 320px;
+
+}
+
+.sous-menu-titre {
+  font-size: 0.9em;
+  color: #efb27f;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+   animation: fadeInMove 1s ease forwards;
+}
+
+@keyframes fadeInMove {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.liens-grilles {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.liens-grilles a {
+  color: #efb27f;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.liens-grilles a:hover {
+  border-color: #efb27f;
+}
+
+
+/* En prévision : */
+
+/* .liens-grilles a.active {
+  position: relative;
+  color: #efb27f;
+  font-weight: 600;
+  padding-left: 12px;
+} */
+
+/* .liens-grilles a.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #efb27f;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  animation: pulseDot 2s ease-in-out infinite;
+} */
+
+/* @keyframes pulseDot {
+  0% {
+    transform: translateY(-50%) scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translateY(-50%) scale(1.4);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 0.7;
+  }
+} */
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .documentaristes-page .intro-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .documentaristes-page .intro-left,
+  .documentaristes-page .intro-right {
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .masonry-grid,
+  .grille-photos-interview {
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .masonry-grid,
+  .grille-photos-interview {
+    column-count: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .fiche-scientifique img,
+  .photo-profil-double img,
+  .photo-profil-triple img,
+  .fiche-personnel img {
+    width: 28vw;
+    /* largeur proportionnelle à l'écran */
+    max-width: 90px;
+    /* taille maximale */
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .galerie-personnel img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .galerie-personnel-speciale img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .galerie-personnel-speciale .img-large {
+    grid-column: span 2;
+  }
+
+  .galerie-personnel-speciale img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  }
+
+
+  .parallax-scroll,
+  .container4,
+  .container,
+  .parallax-scroll-2,
+  .container2,
+  .container3 {
+    display: none !important;
+  }
+
+  .container,
+  .contenu-page,
+  .fiche-scientifique,
+  .bloc-titre,
+  .portfolio-section-photos,
+  .video-wrapper,
+  .masonry-grid {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .fiche-scientifique {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .texte-fonction,
+  .citation {
+    text-align: center;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .copyright-vsc {
+    padding: 5px 10px !important;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}

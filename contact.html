@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact & Abonnement - Carnet d'aventure</title>
+  <link href="assets/css/a-propos.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="lien-icone">
+        <img src="images/drapeau.png" alt="Logo TAAF" />
+      </a>
+      <div>
+        <a href="index.html">À l'Aube des Glaces</a>
+        <a href="a-propos.html">Histoires et Héritages</a>
+
+        <li class="dropdown">
+          <a href="Carnet-Polaire.html">Carnet Polaire</a>
+          <ul class="dropdown-menu">
+            <li><a href="aventures-crozet.html">Aventures-crozet</a></li>
+            <li><a href="bus.html">Bus</a></li>
+            <li><a href="La Pérouse.html">La Pérouse</a></li>
+            <li><a href="Pointe-Basse.html">Pointe-Basse</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="L'équipe H-M62.html">L'équipe H-M62</a>
+          <ul class="dropdown-menu">
+            <li><a href="scientifiques.html">Science & et Vie</a></li>
+            <li><a href="L'épine-dorsale.html">L'épine Dorsale</a></li>
+            <li><a href="documentaristes.html">Nos cinéastes animaliers</a></li>
+          </ul>
+        </li>
+        <a href="contact.html">Contact & Abonnement</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contact-main">
+    <section>
+      <h1>Contact & Abonnement</h1>
+      <div class="carre-contenu">
+        <p>
+          Si vous souhaitez être informé des nouveautés du site (nouvelles photos, restructuration, ajouts de contenu), vous pouvez vous abonner en laissant simplement votre adresse email.
+        </p>
+        <p>
+          Vous ne reçeverez aucune publicité ni aucun spam.
+        </p>
+
+        <form id="subscribe-form" method="POST">
+          <label for="email" class="contact-label">Votre adresse email :</label><br>
+          <input type="email" id="email" name="email" placeholder="Entrez votre email" required /><br>
+          <button type="submit">S'abonner</button>
+        </form>
+
+        <p style="margin-top: 30px;">
+          Pour toute autre demande ou message personnel, vous pouvez me contacter à l’adresse suivante :<br>
+          <a href="mailto:johns.over.jf82@gmail.com">johns.over.jf82@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <img src="images/drapeau.png" alt="Logo TAAF" />
+      <p>
+        © 2025 Jonathan Fradet - Tous droits réservés |
+        <a href="https://taaf.fr/" target="_blank">Site officiel des Terres Australes et Antarctiques Françaises</a>
+      </p>
+      <div class="footer-social">
+        <a target="_blank" href="https://www.github.com/" class="lien-icone">
+          <img src="images/Github.png" alt="github" />
+        </a>
+        <a target="_blank" href="https://www.instagram.com/fradeguen/" class="lien-icone">
+          <img src="images/instagram.png" alt="Logo Instagram" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/data/script.js"></script>
+</body>
+</html>

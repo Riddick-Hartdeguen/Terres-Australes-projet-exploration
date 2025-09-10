@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+  background-color: #1f2039;
+
+}
+
+a {
+  color: #242424;
+  text-decoration: none;
+}
+
+em {
+  color: #126ef0;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 3em;
+  color: #efb27f;
+  font-family: 'Montserrat' sans-serif;
+
+}
+
+h2 {
+  color: #f9f8ff;
+}
+
+p,
+li {
+  font-size: 1em;
+  color: #f9f8ff;
+}
+
+header,
+footer {
+  background-color: white;
+  padding: 20px 50px;
+}
+
+footer {
+  font-family: 'Manrope', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* obligatoire pour répartir correctement les éléments */
+  padding: 0 20px;
+  /* petit padding pour éviter que ça touche les bords */
+  box-sizing: border-box;
+  /* inclut le padding dans la largeur */
+}
+
+.footer-content p {
+  flex: 1;
+  font-size: 0.9em;
+  color: #242424;
+  text-align: center;
+  margin: 10px;
+}
+
+
+.footer-content a {
+  color: #126ef0;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
+.cta {
+  display: inline-block;
+  background-color: #efb17f00;
+  color:#efb27f;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 20px 30px;
+  margin-top: 5%;
+  border-right: 1px solid #efb27f;
+  border-bottom: 1px solid #efb27f;
+
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cta:hover {
+  background-color: #cf985e27;
+  text-decoration: none;
+}
+
+.lien-icone {
+  margin-left: 30px;
+}
+
+.lien-icone:hover {
+  opacity: 0.5;
+}
+
+.carre-contenu {
+  border-right: 1px solid #8e86b5;
+  border-bottom: 1px solid #8e86b5;
+  padding: 50px;
+  margin-bottom: 80px;
+}
+
+.carre-contenu h2 {
+  margin-top: 30px;
+}
+
+.carre-contenu ul {
+  margin-top: 30px;
+}
+
+.carre-contenu+div {
+  text-align: center;
+}
+
+section {
+  padding: 80px;
+  padding-right: 100px;
+}
+
+.a-propos-main {
+  width: 50%;
+  margin: auto;
+}
+
+footer,
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  margin-left: 15px;
+}
+
+/* Définition de l'animation d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Position de départ */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* Position finale */
+  }
+}
+
+/* Styles par défaut des éléments pour les garder invisibles avant l'animation */
+h1,
+h2,
+p {
+  opacity: 0;
+  /* Rendre l'élément invisible */
+  transform: translateY(20px);
+  /* Position initiale en dehors de la vue */
+  transition: opacity 1s, transform 1s;
+  /* Appliquer la transition pour une animation fluide */
+}
+
+/* Classe pour déclencher l'animation */
+.show {
+  opacity: 1;
+  /* Rendre l'élément visible */
+  transform: translateY(0);
+  /* Placer l'élément dans sa position finale */
+}
+
+/* Menu déroulant horizontal centré, sans débordement */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 6px;
+  /* adapte à ton margin-top */
+  width: 100%;
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background-color: white;
+  padding: 5px;
+  padding-bottom: 10px;
+  margin-top: 3px;
+  border-radius: 6px;
+  box-shadow: 0 8px 10px 2px rgba(0, 0, 0, 0.318);
+  white-space: nowrap;
+  animation: fadeIn 0.3s ease forwards;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+
+
+}
+
+.dropdown-menu a {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: #1d1d1f;
+  transition: color 0.5s ease;
+
+  margin-left: 18px;
+  margin-right: 18px;
+
+}
+
+.dropdown-menu a:hover {
+  color: #efb27f;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) translateX(-85%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px) translateX(-85%);
+  }
+}
+
+/* page contact */
+
+.contact-main section {
+  padding: 80px;
+  max-width: 700px;
+  margin: auto;
+  background-color: #1f2039;
+}
+
+.contact-main h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.carre-contenu {
+  background-color: #1f2039;
+  padding: 50px;
+  border-radius: 12px;
+}
+
+.carre-contenu p {
+  line-height: 1.6;
+  color: #f9f8ff;
+}
+
+.carre-contenu a {
+  color: #efb27f;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Champ email + bouton */
+
+form {
+  margin-top: 30px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* Style du bouton */
+button[type="submit"] {
+  background-color: #efb27f;
+  color: #1f2039;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #cf995e;
+}
+
+.contact-label {
+  color: #efb27f;
+  font-weight: bold;
+  display: block;
+}
+
+.container {
+  background-image: url("../../images/portfolio/Accueil_photos/Notre_des_vents.jpg");
+  height: 60vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 1px 2px 3px 4px rgba(76, 76, 76, 0.5);
+}
