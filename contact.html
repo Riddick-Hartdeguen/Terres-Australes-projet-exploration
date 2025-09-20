@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <title>Contact & Abonnement - Carnet d'aventure</title>
+  <title>Contact & Livre d'or - Carnet d'aventure</title>
   <link href="assets/css/a-propos.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,37 +32,41 @@
         <li class="dropdown">
           <a href="L'équipe H-M62.html">L'équipe H-M62</a>
           <ul class="dropdown-menu">
-            <li><a href="scientifiques.html">Science & et Vie</a></li>
+            <li><a href="scientifiques.html">Science & Vie</a></li>
             <li><a href="L'épine-dorsale.html">L'épine Dorsale</a></li>
             <li><a href="documentaristes.html">Nos cinéastes animaliers</a></li>
           </ul>
         </li>
-        <a href="contact.html">Contact & Abonnement</a>
+        <a href="contact.html">Contact & Livre d'or</a>
       </div>
     </nav>
   </header>
 
   <main class="contact-main">
     <section>
-      <h1>Contact & Abonnement</h1>
+      <h1>Contact & Livre d'or</h1>
+
       <div class="carre-contenu">
+        <h2>Me contacter</h2>
         <p>
-          Si vous souhaitez être informé des nouveautés du site (nouvelles photos, restructuration, ajouts de contenu), vous pouvez vous abonner en laissant simplement votre adresse email.
-        </p>
-        <p>
-          Vous ne reçeverez aucune publicité ni aucun spam.
-        </p>
-
-        <form id="subscribe-form" method="POST">
-          <label for="email" class="contact-label">Votre adresse email :</label><br>
-          <input type="email" id="email" name="email" placeholder="Entrez votre email" required /><br>
-          <button type="submit">S'abonner</button>
-        </form>
-
-        <p style="margin-top: 30px;">
-          Pour toute autre demande ou message personnel, vous pouvez me contacter à l’adresse suivante :<br>
+          Pour toute demande, question ou message personnel, vous pouvez m’écrire à l’adresse suivante :<br>
           <a href="mailto:johns.over.jf82@gmail.com">johns.over.jf82@gmail.com</a>
         </p>
+      </div>
+
+      <div class="carre-contenu" style="margin-top: 50px;">
+        <h2>Livre d'or</h2>
+        <p>Laissez un message, une impression, ou un mot gentil dans le livre d’or !</p>
+
+        <form id="livre-or-form" method="POST">
+          <label for="nom" class="contact-label">Votre nom :</label><br>
+          <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required /><br>
+
+          <label for="message" class="contact-label">Votre message :</label><br>
+          <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea><br>
+
+          <button type="submit">Envoyer mon message</button>
+        </form>
       </div>
     </section>
   </main>
