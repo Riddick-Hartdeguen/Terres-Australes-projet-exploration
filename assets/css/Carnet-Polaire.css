@@ -48,11 +48,8 @@ footer {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  /* obligatoire pour répartir correctement les éléments */
   padding: 0 20px;
-  /* petit padding pour éviter que ça touche les bords */
   box-sizing: border-box;
-  /* inclut le padding dans la largeur */
 }
 
 .footer-content p {
@@ -147,7 +144,7 @@ nav a {
 /* Copyright sous la vidéo */
 .copyright-vsc {
   max-width: 960px;
-  margin: -30px auto 0px auto; /* colle à la vidéo sans espace */
+  margin: -30px auto 0px auto; 
   text-align: right;
   font-size: 0.8em;
   color: #151414;
@@ -243,34 +240,25 @@ nav a {
   from {
     opacity: 0;
     transform: translateY(20px);
-    /* Position de départ */
   }
 
   to {
     opacity: 1;
     transform: translateY(0);
-    /* Position finale */
   }
 }
-
-/* Styles par défaut des éléments pour les garder invisibles avant l'animation */
 h1,
 h2,
 p {
   opacity: 0;
-  /* Rendre l'élément invisible */
-  transform: translateY(20px);
-  /* Position initiale en dehors de la vue */
+  transform: translateY(20px); 
   transition: opacity 1s, transform 1s;
-  /* Appliquer la transition pour une animation fluide */
+ 
 }
 
-/* Classe pour déclencher l'animation */
 .show {
   opacity: 1;
-  /* Rendre l'élément visible */
   transform: translateY(0);
-  /* Placer l'élément dans sa position finale */
 }
 
 .sous-titre a {
@@ -307,7 +295,7 @@ p {
 }
 
 .container-3 {
-  background-image: url("../../images/portfolio/Accueil_photos/Marion_Dusfren_soleil_couchant_Croze4kt.jpg");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/portfolio/Accueil_photos/Marion_Dusfren_soleil_couchant_Croze4kt.jpg");
   height: 50vh;
   width: 100%;
   background-size: cover;
@@ -319,7 +307,7 @@ p {
 }
 
 .container-4 {
-  background-image: url("../../images/portfolio/Accueil_photos/Carnet_polaire_au\ _petit_matin.jpg");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/portfolio/Accueil_photos/Carnet_polaire_au%5C%20_petit_matin.jpg");
   height: 50vh;
   width: 100%;
   background-size: cover;
@@ -331,7 +319,7 @@ p {
 }
 
 .container-5 {
-  background-image: url("../../images/portfolio/Accueil_photos/Bus15.jpg");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/portfolio/Accueil_photos/Bus15.jpg");
   height: 50vh;
   width: 100%;
   background-size: cover;
@@ -343,7 +331,7 @@ p {
 }
 
 .container-6 {
-  background-image: url("../../images/portfolio/Accueil_photos/Pérouse.jpg");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/portfolio/Accueil_photos/P%C3%A9rouse.jpg");
   height: 50vh;
   width: 100%;
   background-size: cover;
@@ -355,7 +343,7 @@ p {
 }
 
 .container-7 {
-  background-image: url("../../images/portfolio/Point_Basse/AH.jpg");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/portfolio/Point_Basse/AH.jpg");
   height: 50vh;
   width: 100%;
   background-size: cover;
@@ -371,7 +359,6 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  /* espace très léger pour coller aux images */
   padding: 0 20px;
 }
 
@@ -526,7 +513,7 @@ p {
 }
 
 
-/* Menu déroulant horizontal centré, sans débordement */
+/* Menu déroulant horizontal */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -538,7 +525,6 @@ p {
   top: 100%;
   left: 0;
   height: 6px;
-  /* adapte à ton margin-top */
   width: 100%;
 }
 

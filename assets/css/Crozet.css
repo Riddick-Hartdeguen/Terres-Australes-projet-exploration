@@ -464,7 +464,7 @@ p {
 }
 
 .container {
-  background-image: url("../../images/portfolio/Hivernage/3.jpg");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/portfolio/Hivernage/3.jpg");
   height: 75vh;
   width: 100%;
   background-size: cover;
@@ -472,11 +472,10 @@ p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   box-shadow: inset 1px 2px 3px 4px rgba(76, 76, 76, 0.5);
-
 }
 
 .parallax-scroll {
-  background-image: url("../../images/portfolio/Hivernage/DSC00003.jpg");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/portfolio/Hivernage/DSC00003.jpg");
   height: 50vh;
   width: 100%;
   background-size: cover;
@@ -487,7 +486,7 @@ p {
 }
 
 .parallax-scroll-2 {
-  background-image: url("../../images/portfolio/Documentaristes/240823\ Drone\ Crozet\ Crepuscule\ KPeyrusse_0002.jpg");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/portfolio/Documentaristes/240823%20Drone%20Crozet%20Crepuscule%20KPeyrusse_0002.jpg");
   height: 50vh;
   width: 100%;
   background-size: cover;
@@ -586,7 +585,7 @@ p {
 }
 
 .container4 {
-  background-image: url("../../images/portfolio/scientifiques/Romain12.JPG");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/portfolio/scientifiques/Romain12.JPG");
   height: 65vh;
   width: 100%;
   background-size: cover;
@@ -595,9 +594,8 @@ p {
   background-attachment: fixed;
   box-shadow: inset 1px 2px 3px 4px rgba(76, 76, 76, 0.5);
 }
-
 .container3 {
-  background-image: url("../../images/portfolio/épinedorsale/Team1.jpg");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/portfolio/%C3%A9pinedorsale/Team1.jpg");
   height: 75vh;
   width: 100%;
   background-size: cover;
@@ -608,7 +606,7 @@ p {
 }
 
 .container2 {
-  background-image: url("../../images/portfolio/épinedorsale/240831\ Levee\ Des\ Couleurs\ .jpg");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/portfolio/%C3%A9pinedorsale/240831%20Levee%20Des%20Couleurs%20.jpg");
   height: 75vh;
   width: 100%;
   background-size: cover;
@@ -617,8 +615,8 @@ p {
   background-attachment: fixed;
   box-shadow: inset 1px 2px 3px 4px rgba(76, 76, 76, 0.5);
   margin-bottom: 70px;
-
 }
+
 .paragraphe {
   margin-bottom: 90px;
 }

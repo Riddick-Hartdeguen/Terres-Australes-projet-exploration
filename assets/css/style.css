@@ -165,7 +165,7 @@ nav a {
 }
 
 .container-1 {
-  background-image: url("../../images/index/element-1.jpg");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/index/element-1.jpg");
   height: 600px;
   width: 100%;
   background-size: cover;
@@ -173,7 +173,6 @@ nav a {
   background-repeat: no-repeat;
   background-attachment: fixed;
   box-shadow: inset 1px 2px 3px 4px rgba(76, 76, 76, 0.5);
-
 }
 
 .container-2 {
@@ -194,7 +193,7 @@ nav a {
 }
 
 .container-3 {
-  background-image: url("../../images/index/element-4.jpg");
+  background-image: url("https://pub-7419959f05894755bb36f1ce35374c6a.r2.dev/images/index/element-4.jpg");
   height: 50vh;
   width: 100%;
   background-size: cover;
@@ -202,7 +201,6 @@ nav a {
   background-repeat: no-repeat;
   background-attachment: fixed;
   box-shadow: inset 1px 2px 3px 4px rgba(76, 76, 76, 0.5);
-
 }
 
 
