@@ -451,12 +451,3 @@ button[type="submit"]:hover {
 .message strong {
   color: #e09f6b;
 }
-<<<<<<< HEAD
-=======
-
-/* Animation pour les nouveaux messages */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(5px); }
-  to { opacity: 1; transform: translateY(0); }
-}
->>>>>>> 301578a1ed527e1659c410764c4df5b78853e3b0
