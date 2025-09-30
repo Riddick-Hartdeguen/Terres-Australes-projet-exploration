@@ -451,3 +451,33 @@ button[type="submit"]:hover {
 .message strong {
   color: #e09f6b;
 }
+
+/* ===== Livre d'or ===== */
+#livre-or {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#livre-or .message {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-size: 1em;
+  line-height: 1.4;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#livre-or .message:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+#livre-or .message strong {
+  color: #126ef0; /* même bleu que ton style global */
+  font-weight: 600;
+}
+
