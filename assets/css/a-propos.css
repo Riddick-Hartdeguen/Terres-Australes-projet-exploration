@@ -481,3 +481,12 @@ button[type="submit"]:hover {
   font-weight: 600;
 }
 
+/* Exceptions pour le livre d'or */
+#livre-or .message p {
+  opacity: 1 !important;
+  transform: none !important;
+  text-align: center; /* ou center si tu veux centrer */
+  color: #242424;   /* couleur bien visible */
+}
+
+
