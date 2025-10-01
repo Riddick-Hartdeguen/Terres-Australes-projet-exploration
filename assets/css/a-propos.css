@@ -486,7 +486,7 @@ button[type="submit"]:hover {
   opacity: 1 !important;
   transform: none !important;
   text-align: center; /* ou center si tu veux centrer */
-  color: #242424;   /* couleur bien visible */
+  color: #f2eeee;   /* couleur bien visible */
 }
 
 
