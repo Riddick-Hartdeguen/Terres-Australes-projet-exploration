@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sous-le-ciel-austral.onrender.com/sitemap.xml
