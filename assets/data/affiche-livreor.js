@@ -5,12 +5,19 @@ async function chargerMessages() {
 
     const messages = await res.json();
     const container = document.getElementById("livre-or");
+    if (!container) return;
 
-    container.innerHTML = "";
+    container.replaceChildren();
     messages.forEach(msg => {
       const div = document.createElement("div");
       div.className = "message";
-      div.innerHTML = `<p><strong>${msg.author}</strong> : ${msg.text}</p>`;
+
+      const paragraph = document.createElement("p");
+      const author = document.createElement("strong");
+      author.textContent = msg.author || "Anonyme";
+
+      paragraph.append(author, " : ", document.createTextNode(msg.text || ""));
+      div.appendChild(paragraph);
       container.appendChild(div);
     });
   } catch (err) {

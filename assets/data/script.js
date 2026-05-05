@@ -79,13 +79,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Lightbox ---
   const lightbox = document.getElementById("lightbox-overlay");
   const lightboxImg = document.getElementById("lightbox-image");
+  const lightboxPrev = document.getElementById("lightbox-prev");
+  const lightboxNext = document.getElementById("lightbox-next");
   const photoContainers = document.querySelectorAll(
     ".lien-conteneur-photo, .masonry-grid .item, .galerie-personnel img, .galerie-personnel-speciale img, .ligne-verticales img, .grille-photos-interview .item-svt"
   );
   photoContainers.forEach(container => {
     container.addEventListener("click", () => {
       let img = container.tagName === "IMG" ? container : container.querySelector("img");
-      if (!img) return;
+      if (!img || !lightbox || !lightboxImg) return;
       lightboxImg.src = img.src;
       lightbox.classList.add("show");
     });
@@ -104,21 +106,25 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = -1;
 
   function showImage(index) {
-    if (index >= 0 && index < allImages.length) {
+    if (lightboxImg && index >= 0 && index < allImages.length) {
       lightboxImg.src = allImages[index].src;
       currentIndex = index;
     }
   }
 
-  document.getElementById("lightbox-prev").addEventListener("click", e => {
-    e.stopPropagation();
-    if (currentIndex > 0) showImage(currentIndex - 1);
-  });
+  if (lightboxPrev) {
+    lightboxPrev.addEventListener("click", e => {
+      e.stopPropagation();
+      if (currentIndex > 0) showImage(currentIndex - 1);
+    });
+  }
 
-  document.getElementById("lightbox-next").addEventListener("click", e => {
-    e.stopPropagation();
-    if (currentIndex < allImages.length - 1) showImage(currentIndex + 1);
-  });
+  if (lightboxNext) {
+    lightboxNext.addEventListener("click", e => {
+      e.stopPropagation();
+      if (currentIndex < allImages.length - 1) showImage(currentIndex + 1);
+    });
+  }
 
   photoContainers.forEach(container => {
     container.addEventListener("click", () => {
