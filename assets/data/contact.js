@@ -1,8 +1,13 @@
 document.getElementById("livre-or-form").addEventListener("submit", async function(e) {
   e.preventDefault(); // Empêche le rechargement de la page
 
-  const nom = document.getElementById("nom").value;
-  const message = document.getElementById("message").value;
+  const nom = document.getElementById("nom").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!nom || !message) {
+    alert("Merci de remplir votre nom et votre message.");
+    return;
+  }
 
   try {
     const res = await fetch("https://livre-d-or-backend.onrender.com/messages", {

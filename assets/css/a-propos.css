@@ -471,6 +471,7 @@ button[type="submit"]:hover {
   transform: none !important;
   text-align: center; /* ou center si tu veux centrer */
   color: #f2eeee;   /* couleur bien visible */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
-
 
