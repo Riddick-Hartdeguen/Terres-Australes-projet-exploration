@@ -1231,6 +1231,18 @@ html {
     line-height: 1.15;
   }
 
+    .documentaristes-page .bloc-titre h1 {
+    max-width: 100%;
+    width: 100%;
+    font-size: clamp(2.2em, 13vw, 3.2em);
+    text-align: center;
+  }
+
+  .documentaristes-page .bloc-titre .titre {
+    padding-left: 0;
+  }
+
+
   h2 {
     line-height: 1.25;
   }
