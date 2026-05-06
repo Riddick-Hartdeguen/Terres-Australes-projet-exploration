@@ -1239,6 +1239,7 @@ html {
   }
 
   .documentaristes-page .bloc-titre .titre {
+    display: block;
     padding-left: 0;
   }
 
