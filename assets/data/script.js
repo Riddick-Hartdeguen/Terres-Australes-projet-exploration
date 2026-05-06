@@ -1,4 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // AJOUT RESPONSIVE :
+  // Ce bloc cree le bouton burger sans modifier chaque fichier HTML.
+  // Les media queries CSS gerent l'affichage mobile ; ce script sert seulement
+  // a ouvrir/fermer le menu au clic sur telephone et tablette.
+  document.querySelectorAll("nav").forEach(nav => {
+    const menuLinks = Array.from(nav.children).find(child => child.tagName === "DIV");
+    if (!menuLinks || nav.querySelector(".menu-burger")) return;
+
+    nav.classList.add("nav-responsive-ready");
+    menuLinks.classList.add("nav-liens");
+
+    const burgerButton = document.createElement("button");
+    burgerButton.type = "button";
+    burgerButton.className = "menu-burger";
+    burgerButton.setAttribute("aria-label", "Ouvrir le menu principal");
+    burgerButton.setAttribute("aria-expanded", "false");
+    burgerButton.innerHTML = "<span></span><span></span><span></span>";
+
+    nav.insertBefore(burgerButton, menuLinks);
+
+    burgerButton.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("menu-ouvert");
+      burgerButton.setAttribute("aria-expanded", String(isOpen));
+      burgerButton.setAttribute(
+        "aria-label",
+        isOpen ? "Fermer le menu principal" : "Ouvrir le menu principal"
+      );
+    });
+
+    menuLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("menu-ouvert");
+        burgerButton.setAttribute("aria-expanded", "false");
+        burgerButton.setAttribute("aria-label", "Ouvrir le menu principal");
+      });
+    });
+  });
+
   // --- Animation au scroll ---
   const elementsToShow = document.querySelectorAll("h1, h2, h3, p, blockquote, .fiche-scientifique");
   const observer = new IntersectionObserver(entries => {

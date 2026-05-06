@@ -475,3 +475,287 @@ button[type="submit"]:hover {
   overflow-wrap: anywhere;
 }
 
+/* =========================================================
+   MEDIA QUERIES RESPONSIVE - VERSION MOBILE / TABLETTE
+   ========================================================= */
+
+/* AJOUT RESPONSIVE - Base commune : evite les largeurs fixes qui debordent. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.menu-burger {
+  display: none;
+}
+
+/* AJOUT RESPONSIVE - Menu mobile et ajustements tablette. */
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  header,
+  footer {
+    padding: 18px 28px;
+  }
+
+  nav {
+    position: relative;
+    width: 100%;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  nav img {
+    max-width: 70px;
+    height: auto;
+  }
+
+  .menu-burger {
+    display: flex;
+    width: 46px;
+    height: 42px;
+    margin-left: auto;
+    padding: 8px;
+    border: 1px solid #efb27f;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .menu-burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-radius: 999px;
+    background: #1f2039;
+  }
+
+  nav.nav-responsive-ready .nav-liens {
+    display: none;
+    width: 100%;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  nav.nav-responsive-ready.menu-ouvert .nav-liens {
+    display: flex;
+  }
+
+  nav .nav-liens > a,
+  nav .nav-liens > .dropdown > a {
+    display: block;
+    margin-left: 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    color: #1f2039;
+    background: #f7f3ef;
+    text-align: left;
+    line-height: 1.3;
+  }
+
+  nav .dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  nav .dropdown::after {
+    display: none;
+  }
+
+  nav .dropdown-menu,
+  nav .dropdown:hover .dropdown-menu {
+    display: flex;
+    position: static;
+    width: 100%;
+    margin: 4px 0 8px 0;
+    padding: 0 0 0 14px;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    white-space: normal;
+    animation: none;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  nav .dropdown-menu li {
+    list-style: none;
+    text-align: left;
+  }
+
+  nav .dropdown-menu a {
+    display: block;
+    margin: 0;
+    padding: 10px 12px;
+    border-left: 3px solid #efb27f;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #1f2039;
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding: 60px 32px;
+  }
+
+  .a-propos-main,
+  .contact-main {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .contact-main section {
+    padding: 60px 32px;
+  }
+
+  .container {
+    background-attachment: scroll;
+  }
+
+  .footer-content {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* AJOUT RESPONSIVE - Pages classiques, formulaire et ajustements telephone. */
+@media screen and (max-width: 768px) {
+  header,
+  footer {
+    padding: 14px 18px;
+  }
+
+  section,
+  .contact-main section {
+    padding: 42px 18px;
+  }
+
+  h1 {
+    font-size: 2.1em;
+    line-height: 1.15;
+  }
+
+  h2 {
+    line-height: 1.25;
+  }
+
+  p,
+  li {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  .a-propos-main,
+  .contact-main {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 18px;
+  }
+
+  .carre-contenu {
+    padding: 24px;
+    margin-bottom: 34px;
+    overflow-wrap: anywhere;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input[type="email"],
+  input[type="text"],
+  textarea,
+  button[type="submit"] {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  input[type="email"],
+  input[type="text"],
+  textarea {
+    min-height: 48px;
+    padding: 13px 14px;
+  }
+
+  textarea {
+    min-height: 160px;
+  }
+
+  button[type="submit"] {
+    min-height: 48px;
+    padding: 14px 18px;
+  }
+
+  #livre-or .message {
+    padding: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-content {
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .lien-icone {
+    margin-left: 0;
+  }
+}
+
+/* AJOUT RESPONSIVE - Petit mobile. */
+@media screen and (max-width: 480px) {
+  header,
+  footer {
+    padding: 12px 14px;
+  }
+
+  section,
+  .contact-main section {
+    padding: 34px 14px;
+  }
+
+  h1 {
+    font-size: 1.85em;
+  }
+
+  nav img {
+    max-width: 58px;
+  }
+
+  .menu-burger {
+    width: 42px;
+    height: 40px;
+  }
+
+  .a-propos-main,
+  .contact-main {
+    padding: 0 14px;
+  }
+
+  .carre-contenu {
+    padding: 20px 16px;
+  }
+}
+

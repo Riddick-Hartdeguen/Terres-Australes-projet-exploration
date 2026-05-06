@@ -1025,3 +1025,437 @@ html {
     word-break: break-word;
   }
 }
+
+/* =========================================================
+   MEDIA QUERIES RESPONSIVE - VERSION MOBILE / TABLETTE
+   ========================================================= */
+
+/* AJOUT RESPONSIVE - Base commune : renforce les limites de largeur. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.menu-burger {
+  display: none;
+}
+
+/* AJOUT RESPONSIVE - Menu mobile et ajustements tablette. */
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  header,
+  footer {
+    padding: 18px 28px;
+  }
+
+  nav {
+    position: relative;
+    width: 100%;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  nav img {
+    max-width: 70px;
+    height: auto;
+  }
+
+  .menu-burger {
+    display: flex;
+    width: 46px;
+    height: 42px;
+    margin-left: auto;
+    padding: 8px;
+    border: 1px solid #efb27f;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .menu-burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-radius: 999px;
+    background: #1f2039;
+  }
+
+  nav.nav-responsive-ready .nav-liens {
+    display: none;
+    width: 100%;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  nav.nav-responsive-ready.menu-ouvert .nav-liens {
+    display: flex;
+  }
+
+  nav .nav-liens > a,
+  nav .nav-liens > .dropdown > a {
+    display: block;
+    margin-left: 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    color: #1f2039;
+    background: #f7f3ef;
+    text-align: left;
+    line-height: 1.3;
+  }
+
+  nav .dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  nav .dropdown::after {
+    display: none;
+  }
+
+  nav .dropdown-menu,
+  nav .dropdown:hover .dropdown-menu {
+    display: flex;
+    position: static;
+    width: 100%;
+    margin: 4px 0 8px 0;
+    padding: 0 0 0 14px;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    white-space: normal;
+    animation: none;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  nav .dropdown-menu li {
+    list-style: none;
+    text-align: left;
+  }
+
+  nav .dropdown-menu a {
+    display: block;
+    margin: 0;
+    padding: 10px 12px;
+    border-left: 3px solid #efb27f;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #1f2039;
+    font-size: 0.95rem;
+  }
+
+  section,
+  .portfolio-section-photos {
+    padding: 60px 32px;
+  }
+
+  .titre-et-menu {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .fiche-scientifique {
+    margin: 0 32px 60px 32px;
+  }
+
+  .masonry-grid,
+  .grille-photos-interview {
+    column-count: 2;
+    padding: 32px 18px;
+  }
+
+  .bloc-menu-ancrage {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .menu-ancrage {
+    gap: 8px;
+  }
+
+  .copyright-vsc {
+    position: static;
+    margin: 8px 0 0 0;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .container,
+  .container2,
+  .container3,
+  .container4,
+  .parallax-scroll,
+  .parallax-scroll-2 {
+    background-attachment: scroll;
+  }
+
+  .footer-content {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* AJOUT RESPONSIVE - Galeries photos, pages classiques et ajustements telephone. */
+@media screen and (max-width: 768px) {
+  header,
+  footer {
+    padding: 14px 18px;
+  }
+
+  section,
+  .portfolio-section-photos {
+    padding: 42px 18px;
+  }
+
+  h1,
+  .bloc-titre h1 {
+    font-size: 2.1em;
+    line-height: 1.15;
+  }
+
+  h2 {
+    line-height: 1.25;
+  }
+
+  p,
+  blockquote {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  .titre-et-menu {
+    margin: 36px auto 20px auto;
+    padding: 0 18px;
+    align-items: stretch;
+  }
+
+  .bloc-menu {
+    width: 100%;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .liens-grilles {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .liens-grilles a {
+    display: block;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(239, 178, 127, 0.45);
+  }
+
+  .bloc-menu-ancrage,
+  .bloc-menu-ancrage.fixed {
+    position: static;
+    width: 100%;
+    padding: 0;
+  }
+
+  .menu-ancrage {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .menu-ancrage a,
+  .bloc-menu-ancrage.fixed a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 12px;
+  }
+
+  .fiche-scientifique {
+    width: 100%;
+    margin: 24px 0;
+    padding: 18px;
+  }
+
+  .fiche-scientifique:hover,
+  .masonry-grid .item:hover img,
+  .grille-photos-interview .item-svt:hover img,
+  .ancre-photo img:hover {
+    transform: none;
+  }
+
+  .portrait-double,
+  .portrait-triple {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .fiche-scientifique img,
+  .portrait-double img,
+  .portrait-triple img {
+    width: min(48vw, 160px);
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .masonry-grid,
+  .grille-photos-interview {
+    display: block;
+    column-count: 1 !important;
+    padding: 24px 0;
+    max-width: 100%;
+  }
+
+  .masonry-grid .item,
+  .grille-photos-interview .item-svt {
+    margin: 0 0 18px 0;
+    break-inside: avoid;
+  }
+
+  .masonry-grid .item img,
+  .grille-photos-interview .item-svt img,
+  .galerie-personnel img,
+  .galerie-personnel-speciale img,
+  .ligne-verticales img {
+    width: 100%;
+    height: auto;
+    max-height: 78vh;
+    object-fit: contain;
+    background: #111111;
+  }
+
+  .galerie-personnel,
+  .galerie-personnel-speciale,
+  .ligne-verticales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .documentaristes-page .intro-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .documentaristes-page .intro-left,
+  .documentaristes-page .intro-right {
+    flex: 1 1 100%;
+  }
+
+  .documentaristes-page .intro-right img,
+  .documentaristes-page .intro-photo,
+  .documentaristes-page .intro-video video {
+    width: 100%;
+    height: auto;
+    max-height: 78vh;
+    object-fit: contain;
+  }
+
+  .video-wrapper {
+    margin: 24px 0;
+    border-radius: 8px;
+  }
+
+  .copyright-vsc {
+    position: static;
+    margin: 8px 0 0 0;
+    padding: 0 8px !important;
+    text-align: center;
+  }
+
+  #lightbox-overlay {
+    padding: 14px;
+  }
+
+  #lightbox-image {
+    max-width: 94vw;
+    max-height: 82vh;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  #lightbox-prev,
+  #lightbox-next {
+    display: none;
+  }
+
+  .footer-content {
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .lien-icone {
+    margin-left: 0;
+  }
+}
+
+/* AJOUT RESPONSIVE - Petit mobile. */
+@media screen and (max-width: 480px) {
+  header,
+  footer {
+    padding: 12px 14px;
+  }
+
+  section,
+  .portfolio-section-photos {
+    padding: 34px 14px;
+  }
+
+  h1,
+  .bloc-titre h1 {
+    font-size: 1.85em;
+  }
+
+  nav img {
+    max-width: 58px;
+  }
+
+  .menu-burger {
+    width: 42px;
+    height: 40px;
+  }
+
+  .fiche-scientifique {
+    padding: 16px 12px;
+  }
+
+  .fiche-scientifique img,
+  .portrait-double img,
+  .portrait-triple img {
+    width: min(64vw, 145px);
+  }
+
+  .masonry-grid .item img,
+  .grille-photos-interview .item-svt img,
+  .galerie-personnel img,
+  .galerie-personnel-speciale img,
+  .ligne-verticales img {
+    max-height: 72vh;
+  }
+
+  #lightbox-image {
+    max-width: 96vw;
+    max-height: 80vh;
+  }
+}
