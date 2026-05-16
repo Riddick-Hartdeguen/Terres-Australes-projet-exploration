@@ -1345,8 +1345,11 @@ html {
   .galerie-personnel-speciale img,
   .ligne-verticales img {
     width: 100%;
+    max-width: none;
     height: auto;
     max-height: 78vh;
+    margin: 0;
+    aspect-ratio: auto;
     object-fit: contain;
     background: #111111;
   }
