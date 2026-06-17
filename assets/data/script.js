@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.1 });
   elementsToShow.forEach(el => observer.observe(el));
 
-  // --- Toggle interview (boutons "Voir l'interview") ---
+  //Toggle interview (boutons "Voir l'interview")
   let dernierBoutonClique = null;
 
   document.querySelectorAll(".contenu-interview").forEach(div => {
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- ✅ Menu Sticky (AJOUT) ---
+  // Menu Sticky
   const menuAncrage = document.querySelector(".bloc-menu-ancrage");
   if (menuAncrage) {
     const offsetTop = menuAncrage.offsetTop;
