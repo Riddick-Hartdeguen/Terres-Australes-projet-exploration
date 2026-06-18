@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // AJOUT RESPONSIVE :
-  // Ce bloc cree le bouton burger sans modifier chaque fichier HTML.
+  // Ce bloc cree le bouton burger.
   // Les media queries CSS gerent l'affichage mobile ; ce script sert seulement
   // a ouvrir/fermer le menu au clic sur telephone et tablette.
   document.querySelectorAll("nav").forEach(nav => {
